@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robô Diferencial</title>
+  <link rel="icon" href="favicon.ico">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div>
+    <header>
+      <h1 style="text-align: center; color: white; margin-top: 0px; padding-top: 20px;">
+        Simulação de Robô Diferencial
+      </h1>
+    </header>
+    <section style="max-width: 800px; margin: auto; text-align: center; font-size: 16px;">
+      <h2>Renato Lopes Ribeiro</h2>
+      <p>
+        Esta simulação demonstra a movimentação de um robô diferencial.
+        O robô se movimenta com base em velocidades independentes tanto para a roda esquerda quanto a sua roda direita,
+        simulando a cinemática diferencial.
+      </p>
+      <p>
+        O robô se move para frente caso Vl e Vr tenham o mesmo valor,
+        ele muda sua direção caso Vl ≠ Vr, e ele se rotaciona caso Vl = -Vr.
+      </p>
+      <p>
+        A simulação inclui controle interativo da velocidade das rodas, por via das teclas ou sliders; Física de
+        colisão; Visualização do vetor de velocidade do robô e o histórico do trajeto percorrido pelo mesmo.
+      </p>
+    </section>
+
+    <section style="max-width: 800px; margin: auto; text-align: center; font-size: 16px;">
+      <h2>Controles</h2>
+      <p>
+        Além dos sliders de velocidade, também é possível usar o teclado, conforme as instruções:
+      </p>
+      <table style="width: 100%">
+        <tbody>
+          <tr>
+            <td><kbd>Q</kbd> <br /><span>Acelera o lado esquerdo</span></td>
+            <td><kbd>E</kbd> <br /><span>Acelera o lado direito</span></td>
+          </tr>
+          <tr>
+            <td><kbd>A</kbd> <br /><span>Desacelera o lado esquerdo</span></td>
+            <td><kbd>D</kbd> <br /><span>Desacelera o lado direito</span></td>
+          </tr>
+        </tbody>
+      </table>
+
+    </section>
+
+    <div class="control-panel">
+      <label for="vlSlider">Velocidade Lado Esquerdo:</label>
+      <input type="range" id="vlSlider" min="-200" max="300" value="0">
+      <span id="vlValue">0</span><br>
+
+      <label for="vrSlider">Velocidade Lado Direito:</label>
+      <input type="range" id="vrSlider" min="-200" max="300" value="0">
+      <span id="vrValue">0</span><br>
+    </div>
+  </div>
+
+  <canvas id="canvas" width="1200" height="800"></canvas>
+  <script src="script.js"></script>
+</body>
+
+</html>
